@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="formbold-main-wrapper">
+      <div class="formbold-form-wrapper">
+        <form action="" method="">
+          <label
+            style="font-size: larger"
+            for="firstname"
+            class="formbold-form-label"
+          >
+            Form Tạo Hóa Đơn
+          </label>
+          <div class="formbold-input-flex">
+            <div>
+              <input
+                type="number"
+                name="machine_number"
+                id="machine_number"
+                placeholder="Số Máy"
+                class="formbold-form-input"
+              />
+              <label for="machine_number" class="formbold-form-label">
+                Số Máy ID
+              </label>
+            </div>
+            <div>
+              <input
+                type="number"
+                name="customer_id"
+                id="customer_id"
+                placeholder="Mã Khách Hàng"
+                class="formbold-form-input"
+              />
+              <label for="customer_id" class="formbold-form-label">
+                Mã Khách Hàng
+              </label>
+            </div>
+          </div>
+
+          <label
+            style="font-size: larger"
+            for="service"
+            class="formbold-form-label"
+          >
+            Sử Dụng Dịch Vụ
+          </label>
+          <!-- Surround the select box within a "custom-select" DIV element.
+            Remember to set the width: -->
+          <div class="custom_select_service" style="width: 200px">
+            <select
+              style="height: 30px; margin-top: 30px"
+              class="select_service"
+            >
+              <option value="0">Dịch Vụ</option>
+              <option value="1">Ăn</option>
+              <option value="2">Uống</option>
+            </select>
+            <input
+              class="quantity"
+              style="height: 30px; width: 80px; margin-top: 30px"
+              type="number"
+            />
+            <button id="create_service" class="formbold-btn create_service">
+              Thêm
+            </button>
+          </div>
+          <button class="formbold-btn calculate_total">Tính Tiền</button>
+          <div style="margin-top: 30px">
+            <label style="margin-right: 85px" for="">Dịch Vụ:</label>
+            <label style="margin-right: 81px" for="" for="">Số lượng:</label>
+            <label for=""> Thành Tiền</label>
+            <div class="insert_data"></div>
+          </div>
+          <div>
+            <label for="total_price" class="formbold-form-label">
+              Tổng Giá:
+            </label>
+            <input
+              type="number"
+              name="total_price"
+              id="total_price"
+              placeholder=""
+              class="formbold-form-input"
+              readonly
+            />
+          </div>
+          <button class="formbold-btn submit_bill">Tạo Hóa Đơn</button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
