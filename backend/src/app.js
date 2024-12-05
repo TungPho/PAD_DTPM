@@ -21,6 +21,24 @@ app.get("/services", async (req, res, next) => {
 
 // tìm máy theo id
 
+// tìm id service theo tên
+app.get("/get-services", async (req, res, next) => {
+  const { name } = req.query;
+  const results = (
+    await new mssql.Request().query(
+      `SELECT * FROM dbo.Services WHERE service_name = '${name}'`
+    )
+  ).recordset[0].service_id;
+  try {
+    return res.status(200).json({
+      message: "get name service success",
+      service_id: results,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 // create a new machine
 app.post("/machines", async (req, res, next) => {
   const {} = req.body;
