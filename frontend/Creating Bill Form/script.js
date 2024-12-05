@@ -49,7 +49,6 @@ createServiceButton.addEventListener("click", (e) => {
 
   const value = customSelectList.value;
   const service = customSelectList.options[value].text;
-  const service_id = customSelectList.options[value].getAttribute("");
   let price = customSelectList.options[value].getAttribute("price");
   if (service === "Dịch Vụ") {
     alert("Bạn Hãy Chọn Dịch Vụ Trước");

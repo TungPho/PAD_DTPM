@@ -5,81 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-  
+  </head>
+  <body>
     <div class="formbold-main-wrapper">
       
-        <div class="formbold-form-wrapper">
-            <form action="https://formbold.com/s/FORM_ID" method="POST">
-        <label style="font-size: larger;" for="firstname" class="formbold-form-label">
-            Form Tạo Máy PC
-        </label>
-        <label style="font-size: larger;" for="firstname" class="formbold-form-label">
-           Cấu hình
-        </label>
-        <div class="formbold-input-flex">  
-            <div>
-              <input
-                type="text"
-                name="firstname"
-                id="firstname"
-                placeholder=""
-                class="formbold-form-input"
-              />
-              <label for="firstname" class="formbold-form-label">
-                Chip
-              </label>
-            </div>
-            <div>
-              <input
-                type="text"
-                name="lastname"
-                id="lastname"
-                placeholder=""
-                class="formbold-form-input"
-              />
-              <label for="lastname" class="formbold-form-label">
-                Màn Hình
-              </label>
-            </div>
+      <div class="formbold-form-wrapper">
+      <form>
+      <label style="font-size: larger;" for="firstname" class="formbold-form-label">
+          Form Tạo Máy PC
+      </label>
+      <label style="font-size: larger;" for="firstname" class="formbold-form-label">
+         Cấu hình
+      </label>
+      <div class="formbold-input-flex">  
+          <div>
+            <input
+              type="text"
+              name="machine_name"
+              id="machine_name"
+              placeholder=""
+              class="formbold-form-input"
+            />
+            <label for="lastname" class="formbold-form-label">
+              Tên Máy Tính
+            </label>
           </div>
-
-          <div class="formbold-input-flex">
-            <div>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder=""
-                class="formbold-form-input"
-              />
-              <label for="email" class="formbold-form-label"> Card Đồ Họa </label>
-            </div>
-            <div>
-              <input
-                type="text"
-                name="phone"
-                id="phone"
-                placeholder=""
-                class="formbold-form-input"
-              />
-              <label for="phone" class="formbold-form-label"> Chuột </label>
-            </div>
+        </div>
+        <div class="formbold-input-flex">
+          <div>
+            <input
+              type="number"
+              name="hourly_rate"
+              id="hourly_rate"
+              placeholder="VD: 10000"
+              class="formbold-form-input"
+            />
+            <label for="email" class="formbold-form-label"> Số tiền/ Giờ </label>
           </div>
-          <!-- Surround the select box within a "custom-select" DIV element.
-            Remember to set the width: -->
-          <div class="custom-select" style="width: 200px">
-            <select>
-              <option value="0">Loại Máy</option>
-              <option value="1">VIP</option>
-              <option value="1">Thường</option>
-             
-            </select>
-         
+        </div>
+        <!-- Surround the select box within a "custom-select" DIV element.
+          Remember to set the width: -->
+        <div class="custom-select" style="width: 200px">
+          <select class="select_type">
+            <option value="0">Loại Máy</option>
+            <option value="1">VIP</option>
+            <option value="1">Normal</option>
+          </select>
+       
 
-          <button class="formbold-btn">Create Computer Machine</button>
-        </form>
-      </div>
+        <button class="formbold-btn create_machine_button">Create Computer Machine</button>
+      </form>
     </div>
-  </head>
-  <body></body>
+  </div>
+  <script src="script.js"></script>
+  </body>
 </html>
