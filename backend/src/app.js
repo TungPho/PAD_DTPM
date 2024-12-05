@@ -41,13 +41,15 @@ app.get("/get-services", async (req, res, next) => {
 
 // create a new machine
 app.post("/machines", async (req, res, next) => {
-  const {} = req.body;
-  const results = (
-    await new mssql.Request().query(`SELECT * FROM dbo.Services`)
-  ).recordset;
+  const { machine_name, machine_type, hourly_rate } = req.body;
+  console.log(machine_name, machine_type, hourly_rate);
+  const results = await new mssql.Request().query(
+    `INSERT INTO Machines (machine_name, machine_type, hourly_rate) VALUES ('${machine_name}', '${machine_type}', ${hourly_rate})`
+  );
+
   try {
     return res.status(200).json({
-      message: "Create a new bill success",
+      message: "Create a new machine success",
       metadata: results,
     });
   } catch (error) {}
